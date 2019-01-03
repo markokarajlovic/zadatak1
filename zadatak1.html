@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zadatak 1</title>
+    <link rel="stylesheet" type="text/css" href="zadatak1.css">
+    <script type="text/javascript" src="zadatak1.js"></script>
+</head>
+
+<body>
+
+    <input id="num1" type="text" name="num1" onclick='updateFocus(num1)' value="">
+    <span id="operacija"></span>
+    <input id="num2" type="text" name="num2" onclick='updateFocus(num2)' value="">
+    <span>=</span>
+    <span id="rezultat">0</span>
+    <br><br>
+
+    <div class="container">
+        <div class="calc-body">
+            <div class="calc-button-row">
+                <input type="button" class="button" onclick="numClick(7)" value="7">
+                <input type="button" class="button" onclick="numClick(8)" value="8">
+                <input type="button" class="button" onclick="numClick(9)" value="9">
+                <input type="button" class="button" onclick="operationClick('*')" value="*">
+            </div>
+            <div class="calc-button-row">
+                <input type="button" class="button" onclick="numClick(4)" value="4">
+                <input type="button" class="button" onclick="numClick(5)" value="5">
+                <input type="button" class="button" onclick="numClick(6)" value="6">
+                <input type="button" class="button" onclick="operationClick('-')" value="-">
+            </div>
+            <div class="calc-button-row">
+                <input type="button" class="button" onclick="numClick(1)" value="1">
+                <input type="button" class="button" onclick="numClick(2)" value="2">
+                <input type="button" class="button" onclick="numClick(3)" value="3">
+                <input type="button" class="button" onclick="operationClick('+')" value="+">
+            </div>
+            <div class="calc-button-row">
+                <input type="button" class="button" onclick="clearIt() " value="C">
+                <input type="button" class="button" onclick="numClick(0)" value="0">
+                <input type="button" class="button" onclick="calculate()" value="=">
+                <input type="button" class="button" onclick="operationClick('/')" value="/">
+            </div>
+        </div>
+
+</body>
+
+</html>
