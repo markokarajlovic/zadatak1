@@ -1,10 +1,13 @@
-var activeElement;
+// inicijalizacija selektovanog textbox-a
+let activeElement;
 
+// proveravamo koji textbox je selektovan
 function updateFocus(input) {
 	activeElement = input;
 	console.log("Aktivan element je: " + activeElement.name);
 }
 
+// dodavanje broja u selektovan textbox pritiskom na broj
 function numClick(number) {
 
 	if (activeElement == null) {
@@ -15,12 +18,13 @@ function numClick(number) {
 
 	console.log("Kliknuto na broj =" + number);
 
-	var tempText = activeElement.value;
+	let tempText = activeElement.value;
 	tempText += number;
 	activeElement.value = tempText;
 
 }
 
+// brisanje svih vrednosti na kalkulatoru
 function clearIt() {
 	document.getElementById('operacija').innerHTML = "";
 	document.getElementById('num1').value = "";
@@ -30,6 +34,7 @@ function clearIt() {
 	console.log("Sve cisto");
 }
 
+// ispisivanje racunarske operacije
 function operationClick(operation) {
 
 	document.getElementById('operacija').innerHTML = operation;
@@ -37,10 +42,11 @@ function operationClick(operation) {
 	console.log("Operacija je: " + operation);
 }
 
+// racunanje
 function calculate() {
 
-	let num1 = parseInt(document.getElementById('num1').value);
-	let num2 = parseInt(document.getElementById('num2').value);
+	let num1 = parseFloat(document.getElementById('num1').value);
+	let num2 = parseFloat(document.getElementById('num2').value);
 
 
 	let result = 0;
@@ -49,7 +55,7 @@ function calculate() {
 	switch (o) {
 
 		case "+":
-			result = num1 + num2;
+			result = (num1*10 + num2*10)/10;
 			break;
 
 		case "-":
